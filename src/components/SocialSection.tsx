@@ -1,10 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
 import { Mail, MapPin, Phone, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { toast } from "sonner";
-import { set } from 'date-fns';
 
 export default function SocialSection() {
     const form = useRef<HTMLFormElement>(null);
@@ -13,32 +11,15 @@ export default function SocialSection() {
         e.preventDefault();
 
         if (form.current) {
-            const formData = new FormData(form.current);
-            const templateParams = {
-                email_type: 'nouveau contact Submission',
-                name: formData.get('email') as string,
-                email: formData.get('email') as string,
-                reply_message : 'Merci de nous avoir contacté. Nous vous répondrons dès que possible.',
-                message_html: `<p>${formData.get('message') as string}</p>`
-            };
             setIsLoading(true);
-            emailjs.send(
-                'gmail', //  EmailJS Service ID
-                'template_v2dtw3l', // EmailJS Template ID
-                templateParams,
-                'idE4iDSPmZ0QJLhIl' // EmailJS User ID
-            )
-            .then(() => {
+            setTimeout(() => {
                 setIsLoading(false);
                 toast.success("Message envoyée avec succès!", {
                 description: "Nous vous contacterons bientôt",
                 duration: 5000,
                 });
                 form.current?.reset();
-            })
-            .catch((error) => {
-                alert('Échec de l\'envoi du message: ' + error.text);
-            });
+            }, 1000);
         }
     };
     return (

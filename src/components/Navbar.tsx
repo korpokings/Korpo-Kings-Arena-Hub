@@ -36,7 +36,7 @@ export const Navbar = () => {
           <img
             src={Logo} 
             alt="Logo"
-            className="h-11 w-11 mr-2"></img>
+            className="h-12 w-12 mr-2"></img>
           <span className="text-white font-bold text-xl">KORPO KINGS</span>
         </Link>
 

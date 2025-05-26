@@ -1,14 +1,14 @@
 
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Clock, Flag, Info, ClipboardCheck } from 'lucide-react';
+import {  Clock, Info} from 'lucide-react';
 import { useEffect } from 'react';
 import MysteryPlayer from '@/assets/images/rulesCards/mystery player.png';
 import clutch from '@/assets/images/rulesCards/clutch.png';
 import overtime from '@/assets/images/rulesCards/overtime.png';
 import powerPlayer from '@/assets/images/rulesCards/power play.png';
+import heroBG from '@/assets/images/4.png'
 const Rules = () => {
       useEffect(() => {
         window.scrollTo(0, 0);
@@ -20,7 +20,7 @@ const Rules = () => {
       <div className="pt-24 md:pt-28 lg:pt-32 px-4 relative">
         <div 
           className="w-full h-[300px] md:h-[400px] bg-cover bg-center relative"
-          style={{ backgroundImage: "url('./src/assets/images/4.png')" }}
+          style={{ backgroundImage: `url(${heroBG})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-korpo-black via-korpo-black/40 to-korpo-black/2  0"></div>
 

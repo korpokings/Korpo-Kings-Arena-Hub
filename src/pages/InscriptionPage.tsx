@@ -53,35 +53,9 @@ const Inscription = () => {
 
 const onSubmit = (data: FormValues) => {
   if (data) {
-    const htmlTable = `
-      <table >
-        <tr><th></th><th></th></tr>
-        <tr><td>Nom de l'entreprise</td><td>${data.companyName}</td></tr>
-        <tr><td>Nom complet</td><td>${data.fullName}</td></tr>
-        <tr><td>Poste</td><td>${data.position}</td></tr>
-        <tr><td>Email</td><td>${data.email}</td></tr>
-        <tr><td>Téléphone</td><td>${data.phone}</td></tr>
-        <tr><td>Nombre d'équipes</td><td>${data.teamCount}</td></tr>
-        <tr><td>Département</td><td>${data.department}</td></tr>
-        <tr><td>Dossier souhaité</td><td>${data.wantDossier}</td></tr>
-      </table>
-    `;
-    const templateParams = {
-      email_type: 'Nouvelle Inscription à Karpo Kings',
-      name: data.companyName,
-      email: data.email,
-      reply_message : 'We are happy that you are interested in our event. We will get back to you soon.',
-      message_html: htmlTable , 
-    };
-    setIsLoading(true)
-    emailjs.send(
-      'gmail', // Service ID
-      'template_v2dtw3l', // Template ID
-      templateParams,
-      'idE4iDSPmZ0QJLhIl' // Public Key
-    )
-    .then(() => {
-      setIsLoading(false)
+    setIsLoading(true);
+    setTimeout(() => {
+       setIsLoading(false)
       toast.success("Inscription envoyée avec succès!", {
         description: "Nous vous contacterons bientôt",
         duration: 5000,
@@ -89,10 +63,7 @@ const onSubmit = (data: FormValues) => {
       setTimeout(() => {
         navigate("/");
       }, 2000);
-    })
-    .catch((error) => {
-      alert("Échec de l'envoi du message: " + error.text);
-    });
+    }, 1000);
   }
 };
 

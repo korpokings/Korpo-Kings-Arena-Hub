@@ -77,7 +77,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
             <p className="text-gray-300 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles et mises à jour.</p>
-            <form className="flex flex-col space-y-2">
+            {/* <form className="flex flex-col space-y-2">
               <input 
                 type="email" 
                 placeholder="Votre email" 
@@ -86,7 +86,7 @@ const Footer = () => {
               <button type="submit" className="bg-korpo-orange hover:bg-amber-600 text-white font-semibold py-2 px-4 rounded transition-colors">
                 S'abonner
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
 

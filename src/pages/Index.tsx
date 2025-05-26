@@ -12,7 +12,7 @@ import LastNewsSection from '@/components/LastNewsSection';
 import FinalsSection from '@/components/FinalsSection';
 import StatisticsSection from '@/components/StatisticsSection';
 import SocialSection from '@/components/SocialSection';
-
+import Registration from '@/assets/images/4.png'
 
 const Index = () => {
 
@@ -53,7 +53,7 @@ const Index = () => {
         id="register"
         className={`py-20 relative transition-transform duration-1000`}
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('./src/assets/images/4.png')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(${Registration})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

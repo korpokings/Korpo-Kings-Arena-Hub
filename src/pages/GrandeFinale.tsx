@@ -13,7 +13,6 @@ import {
   Music
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { 
   Card,
   CardContent,
@@ -21,6 +20,7 @@ import {
   CardTitle 
 } from '@/components/ui/card';
 import logoFinals from '@/assets/images/logo-final-kkc2.png';
+import HeroBg from '@/assets/images/7.png'
 const GrandeFinale = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -47,7 +47,7 @@ useEffect(() => {
           headerInView ? 'opacity-100' : 'opacity-0'
         }`}
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('./src/assets/images/7.png')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${HeroBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -99,6 +99,7 @@ useEffect(() => {
 {/* Activities Section */}
 <section 
   ref={activitiesRef}
+  id='programme'
   className={`py-20 bg-korpo-black transition-opacity duration-1000 ${
     activitiesInView ? 'opacity-100' : 'opacity-0'
   }`}
