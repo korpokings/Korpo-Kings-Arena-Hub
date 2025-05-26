@@ -2,12 +2,11 @@ import { useEffect } from 'react';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ChevronDown , MapPin } from 'lucide-react';
 import TournamentF from '@/assets/images/calnd.png';
 import { Link } from 'react-router-dom';
+import HeroBg from '@/assets/images/6.png'
 const TournamentFormat = () => {
       useEffect(() => {
       window.scrollTo(0, 0);
@@ -19,7 +18,7 @@ const TournamentFormat = () => {
       <div className="pt-24 md:pt-28 lg:pt-32 px-4 relative">
         <div 
           className="w-full h-[300px] md:h-[400px] bg-cover bg-center relative"
-          style={{ backgroundImage: "url('./src/assets/images/6.png')" }}
+          style={{ backgroundImage: `url(${HeroBg})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-korpo-black via-korpo-black/40 to-korpo-black/20"></div>
           <div className="container mx-auto relative h-full flex flex-col justify-center">
