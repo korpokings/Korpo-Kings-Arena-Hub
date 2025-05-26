@@ -94,7 +94,7 @@ const WhyParticipate = () => {
       <BenefitCard 
         icon={<Network size={48} />} 
         title="Opportunités de réseautage"
-        description="Échangez avec d’autres entreprises participantes : Dislog, BOA, Tractafric, etc."
+        description="Échangez avec d’autres entreprises participantes."
       />
       
       <BenefitCard 

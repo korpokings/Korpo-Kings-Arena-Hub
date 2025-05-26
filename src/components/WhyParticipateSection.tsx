@@ -38,7 +38,7 @@ export default function WhyParticipateSection() {
                 <Network className="w-12 h-12" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Networking</h3>
-              <p className="text-gray-300">Réseautage avec les autres entreprises participantes (Dislog, BOA, Tractafric, etc.).</p>
+              <p className="text-gray-300">Réseautage avec les autres entreprises participantes.</p>
             </div>
           </div>
 

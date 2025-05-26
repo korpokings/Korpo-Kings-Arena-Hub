@@ -8,24 +8,24 @@ import { Link } from 'react-router-dom';
 import { Calendar, MapPin } from 'lucide-react';
 
 export default function HeroSection() {
-  const tournamentDate = new Date("2025-09-14T00:00:00");
+  const tournamentDate = new Date("2025-07-30T00:00:00");
   const { ref: heroRef, inView: heroInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
   return (
-    <section
-      ref={heroRef}
-      className={`relative min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center px-4 py-12 md:py-20 transition-opacity duration-1000 ${heroInView ? 'opacity-100' : 'opacity-0'
-        }`}
-      style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
-      <div className="container mx-auto text-center">
+  <section
+    ref={heroRef}
+    className={`relative min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center px-2 py-10 md:px-4 md:py-20 transition-opacity duration-1000 ${
+      heroInView ? 'opacity-100' : 'opacity-0'
+    }`}
+    style={{
+      backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${heroBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'scroll',
+    }}
+  >  <div className="container mx-auto text-center">
         <div className="mb-4 md:mb-6 flex justify-center">
           <img
             src={Logo}
@@ -69,7 +69,7 @@ export default function HeroSection() {
         </div>
 
         <div className="mb-8 md:mb-12">
-          <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">COUP D'ENVOI DANS</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">DATE LIMITE D'INSCRIPTION</h2>
           <CountdownTimer targetDate={tournamentDate} />
         </div>
 

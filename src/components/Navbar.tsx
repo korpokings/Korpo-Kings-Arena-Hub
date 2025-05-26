@@ -36,7 +36,7 @@ export const Navbar = () => {
           <img
             src={Logo} 
             alt="Logo"
-            className="h-12 w-12 mr-2"></img>
+            className="h-11 w-11 mr-2"></img>
           <span className="text-white font-bold text-xl">KORPO KINGS</span>
         </Link>
 
@@ -57,9 +57,9 @@ export const Navbar = () => {
           <Link to="/format-tournoi" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/format-tournoi' ? 'text-korpo-orange' : ''}`}>
             Format
           </Link>
-          <Link to="/newsroom" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/newsroom' ? 'text-korpo-orange' : ''}`}>
+          {/* <Link to="/newsroom" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/newsroom' ? 'text-korpo-orange' : ''}`}>
             Newsroom
-          </Link>
+          </Link> */}
           <Link to="/finale" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/finale' ? 'text-korpo-orange' : ''}`}>
             La finale
           </Link>

@@ -1,8 +1,20 @@
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Mail, MapPin, Phone, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { toast } from "sonner";
+import { set } from 'date-fns';
+import {
+  FaInstagram,
+  FaTiktok,
+  FaFacebookF,
+  FaXTwitter,
+  FaYoutube,
+  FaKickstarterK,
+  FaTwitch,
+  FaLinkedinIn,
+} from "react-icons/fa6";
 
 export default function SocialSection() {
     const form = useRef<HTMLFormElement>(null);
@@ -12,14 +24,14 @@ export default function SocialSection() {
 
         if (form.current) {
             setIsLoading(true);
-            setTimeout(() => {
+            setTimeout(()=>{
                 setIsLoading(false);
                 toast.success("Message envoyée avec succès!", {
                 description: "Nous vous contacterons bientôt",
                 duration: 5000,
                 });
                 form.current?.reset();
-            }, 1000);
+            },1000)
         }
     };
     return (
@@ -112,20 +124,16 @@ export default function SocialSection() {
                             {/* Réseaux sociaux */}
                             <div className="pt-2">
                                 <h4 className="text-lg font-semibold text-white mb-4">SUIVEZ-NOUS</h4>
-                                <div className="flex gap-4">
-                                    <a href="#" className="bg-korpo-black/70 hover:bg-korpo-orange/20 p-3 rounded-full border border-korpo-orange/30 transition-all group">
-                                        <Instagram className="text-gray-300 group-hover:text-korpo-orange" size={20} />
-                                    </a>
-                                    <a href="#" className="bg-korpo-black/70 hover:bg-korpo-orange/20 p-3 rounded-full border border-korpo-orange/30 transition-all group">
-                                        <Facebook className="text-gray-300 group-hover:text-korpo-orange" size={20} />
-                                    </a>
-                                    <a href="#" className="bg-korpo-black/70 hover:bg-korpo-orange/20 p-3 rounded-full border border-korpo-orange/30 transition-all group">
-                                        <Twitter className="text-gray-300 group-hover:text-korpo-orange" size={20} />
-                                    </a>
-                                    <a href="#" className="bg-korpo-black/70 hover:bg-korpo-orange/20 p-3 rounded-full border border-korpo-orange/30 transition-all group">
-                                        <Linkedin className="text-gray-300 group-hover:text-korpo-orange" size={20} />
-                                    </a>
-                                </div>
+                                      <div className="flex justify-center flex-wrap gap-4 mb-6">
+                                        <SocialIcon href="https://instagram.com/korpokings/" icon={<FaInstagram />} />
+                                        <SocialIcon href="https://www.tiktok.com/@korpo.kings" icon={<FaTiktok />} />
+                                        <SocialIcon href="https://www.facebook.com/61573498238652" icon={<FaFacebookF />} />
+                                        <SocialIcon href="https://x.com/Korpokings" icon={<FaXTwitter />} />
+                                        <SocialIcon href="https://www.youtube.com/@KorpoKingsMaroc" icon={<FaYoutube />} />
+                                        <SocialIcon href="https://kick.com/korpokings" icon={<FaKickstarterK />} />
+                                        <SocialIcon href="https://www.twitch.tv/korpokings" icon={<FaTwitch />} />
+                                        <SocialIcon href="https://www.linkedin.com/company/106524629/" icon={<FaLinkedinIn />} />
+                                      </div>
                             </div>
                         </div>
                     </div>
@@ -134,3 +142,13 @@ export default function SocialSection() {
         </section>
     )
 } 
+const SocialIcon = ({ href, icon }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white border-2 border-orange-500 rounded-full p-2 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+  >
+    {icon}
+  </a>
+);

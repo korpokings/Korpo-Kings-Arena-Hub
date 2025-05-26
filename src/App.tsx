@@ -14,7 +14,9 @@ import Newsroom from "./pages/Newsroom";
 import ArticleDetail from "./pages/ArticleDetail";
 import GrandeFinale from "./pages/GrandeFinale";
 import InscriptionPage from './pages/InscriptionPage';
-
+import MentionsLegales from '@/pages/MentionsLegales';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -34,10 +36,13 @@ const App = () => (
           <Route path="/finale" element={<GrandeFinale />} />
           <Route path="/equipes" element={<NotFound />} />
           <Route path="/inscription" element={<InscriptionPage />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
+      <SpeedInsights />
     </TooltipProvider>
   </QueryClientProvider>
 );

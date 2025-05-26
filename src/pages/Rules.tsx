@@ -2,13 +2,13 @@
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
-import {  Clock, Info} from 'lucide-react';
+import { Clock, Info} from 'lucide-react';
 import { useEffect } from 'react';
 import MysteryPlayer from '@/assets/images/rulesCards/mystery player.png';
 import clutch from '@/assets/images/rulesCards/clutch.png';
 import overtime from '@/assets/images/rulesCards/overtime.png';
 import powerPlayer from '@/assets/images/rulesCards/power play.png';
-import heroBG from '@/assets/images/4.png'
+import HeroBg from '@/assets/images/4.png'
 const Rules = () => {
       useEffect(() => {
         window.scrollTo(0, 0);
@@ -20,7 +20,7 @@ const Rules = () => {
       <div className="pt-24 md:pt-28 lg:pt-32 px-4 relative">
         <div 
           className="w-full h-[300px] md:h-[400px] bg-cover bg-center relative"
-          style={{ backgroundImage: `url(${heroBG})` }}
+          style={{ backgroundImage: `url(${HeroBg})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-korpo-black via-korpo-black/40 to-korpo-black/2  0"></div>
 
@@ -107,7 +107,7 @@ const Rules = () => {
         <section className="mb-10">
           <div className="mb-8 flex items-center">
             <Info size={32} className="text-korpo-orange mr-3" />
-            <h2 className="text-3xl font-bold text-white">Badges stratégiques (officiels)
+            <h2 className="text-3xl font-bold text-white">Badges stratégiques
 </h2>
           </div>
           <Card className="bg-korpo-darkgray border-korpo-orange/20 text-white">

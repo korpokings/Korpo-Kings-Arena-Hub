@@ -23,7 +23,7 @@ export default function TournamentFormatSection() {
                 <Grid3x3 className="w-12 h-12 text-korpo-orange" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Phase de Groupes</h3>
-              <p className="text-gray-300">4 groupes de 8 équipes</p>
+              <p className="text-gray-300">4 groupes de 4 équipes</p>
             </div>
 
             <div className="hidden md:block text-korpo-orange">

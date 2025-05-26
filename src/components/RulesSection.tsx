@@ -26,13 +26,18 @@ export default function RulesSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Composition d'Équipe</h3>
-                <p className="text-gray-300">7 joueurs (5 + 2 remplaçants)</p>
               </div>
             </div>
             <ul className="space-y-2 text-gray-300 pl-2">
               <li className="flex items-start">
                 <span className="text-korpo-orange mr-2">•</span>
-                <span>2 invités max + 1 "Joker" autorisés</span>
+                <span>Liste élargie : 15 joueurs + 2 membres du staff.
+</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-korpo-orange mr-2">•</span>
+                <span>Pour chaque match : liste réduite à 10 joueurs (5 titulaires + 5 remplaçants).
+</span>
               </li>
               <li className="flex items-start">
                 <span className="text-korpo-orange mr-2">•</span>

@@ -12,7 +12,6 @@ import {
   Utensils,
   Music
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { 
   Card,
   CardContent,
@@ -86,20 +85,13 @@ useEffect(() => {
             </div>
           </div>
 
-          <Button 
-            asChild
-            size="lg"
-            className="bg-korpo-orange hover:bg-amber-600 text-white text-lg px-8 py-6 mt-4 animate-bounce"
-          >
-            <a href="#programme">DÉCOUVRIR LE PROGRAMME</a>
-          </Button>
+
         </div>
       </section>
 
 {/* Activities Section */}
 <section 
   ref={activitiesRef}
-  id='programme'
   className={`py-20 bg-korpo-black transition-opacity duration-1000 ${
     activitiesInView ? 'opacity-100' : 'opacity-0'
   }`}

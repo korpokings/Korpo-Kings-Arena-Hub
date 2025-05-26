@@ -12,7 +12,6 @@ import {
   Folder, FileText, Check, X, ArrowRight, 
   ArrowLeft, Sparkles
 } from "lucide-react";
-import emailjs from '@emailjs/browser';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -55,7 +54,7 @@ const onSubmit = (data: FormValues) => {
   if (data) {
     setIsLoading(true);
     setTimeout(() => {
-       setIsLoading(false)
+      setIsLoading(false)
       toast.success("Inscription envoyée avec succès!", {
         description: "Nous vous contacterons bientôt",
         duration: 5000,
@@ -63,7 +62,8 @@ const onSubmit = (data: FormValues) => {
       setTimeout(() => {
         navigate("/");
       }, 2000);
-    }, 1000);
+    }, 100);
+    
   }
 };
 

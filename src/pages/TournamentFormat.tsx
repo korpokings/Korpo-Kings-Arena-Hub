@@ -2,8 +2,10 @@ import { useEffect } from 'react';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { ChevronDown , MapPin } from 'lucide-react';
 import TournamentF from '@/assets/images/calnd.png';
 import { Link } from 'react-router-dom';
 import HeroBg from '@/assets/images/6.png'

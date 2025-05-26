@@ -4,15 +4,13 @@ import { Layout } from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
-import ConceptSection from '@/components/ConceptSection';
 import WhyParticipateSection from '@/components/WhyParticipateSection';
 import RulesSection from '@/components/RulesSection';
 import TournamentFormatSection from '@/components/TournementFormatSection';
 import LastNewsSection from '@/components/LastNewsSection';
 import FinalsSection from '@/components/FinalsSection';
-import StatisticsSection from '@/components/StatisticsSection';
 import SocialSection from '@/components/SocialSection';
-import Registration from '@/assets/images/4.png'
+import RegisterBg from '@/assets/images/4.png'
 
 const Index = () => {
 
@@ -27,9 +25,6 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Concept Section */}
-      <ConceptSection />
-
       {/* Why Participate Section */}
       <WhyParticipateSection />
 
@@ -40,20 +35,20 @@ const Index = () => {
       <TournamentFormatSection />
 
       {/* News Section */}
-      <LastNewsSection />
+      
 
       {/* Finals Section */}
       <FinalsSection />
 
-      {/* Statistics Section */}
-      <StatisticsSection />
+      {/* Contact & Social Section */}
+      <SocialSection/>
 
       {/* Registration Section */}
       <section
         id="register"
         className={`py-20 relative transition-transform duration-1000`}
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(${Registration})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(${RegisterBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -66,7 +61,7 @@ const Index = () => {
             <div className="w-24 h-1 bg-korpo-orange mx-auto my-6"></div>
 
             <p className="text-xl text-white mb-8">
-              Ne manquez pas cette occasion unique de participer au plus grand tournoi de football corporate du Maroc. Les places sont limitées !
+              Le tournoi corporate le plus innovant du Maroc. Règles inédites, badges tactiques, shows inoubliables… Places limitées, ne ratez pas votre chance !
             </p>
 
             <Button
@@ -79,9 +74,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Contact & Social Section */}
-      <SocialSection/>
 
     </Layout>
   );

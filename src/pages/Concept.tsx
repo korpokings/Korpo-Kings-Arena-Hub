@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Trophy, Users, Network, Eye ,Briefcase ,Gamepad ,Star} from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Briefcase ,Gamepad ,Star} from "lucide-react";
 import conceptBG from "@/assets/images/8.png";
 import { useEffect } from "react";
 
@@ -56,7 +55,8 @@ const Concept = () => {
                 <Gamepad className="text-korpo-orange h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Expérience de Jeu Inédite</h3>
-              <p className="text-gray-300">Une expérience de jeu inédite, immersive et médiatisée.</p>
+              <p className="text-gray-300">Un terrain habillé, des casters, lumières LED et effets sonores créent une ambiance pro, immersive et spectaculaire à chaque match.
+</p>
             </div>
 
             <div className="bg-korpo-black/80 backdrop-blur-sm border border-korpo-orange/20 rounded-lg p-6 text-center transition-all duration-300 hover:border-korpo-orange">
@@ -64,7 +64,8 @@ const Concept = () => {
                 <Briefcase className="text-korpo-orange h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Plateforme RH Engagée</h3>
-              <p className="text-gray-300">Une plateforme RH & marque employeur visible et engageante.</p>
+              <p className="text-gray-300">Une diffusion live simple en deux clics, qui implique joueurs et collaborateurs, crée cohésion d’équipe, sentiment d’appartenance et renforce la culture d’entreprise.
+</p>
             </div>
 
             <div className="bg-korpo-black/80 backdrop-blur-sm border border-korpo-orange/20 rounded-lg p-6 text-center transition-all duration-300 hover:border-korpo-orange">
@@ -72,7 +73,7 @@ const Concept = () => {
                 <Star className="text-korpo-orange h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Valorisation des Collaborateurs</h3>
-              <p className="text-gray-300">Une mise en valeur stratégique de vos collaborateurs à travers le contenu et le show.</p>
+              <p className="text-gray-300">Des contenus authentiques sur les réseaux, qui valorisent vos collaborateurs et renforcent marque employeur et attractivité RH.</p>
             </div>
           </div>
 
