@@ -57,9 +57,9 @@ export const Navbar = () => {
           <Link to="/format-tournoi" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/format-tournoi' ? 'text-korpo-orange' : ''}`}>
             Format
           </Link>
-          {/* <Link to="/newsroom" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/newsroom' ? 'text-korpo-orange' : ''}`}>
+          <Link to="/newsroom" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/newsroom' ? 'text-korpo-orange' : ''}`}>
             Newsroom
-          </Link> */}
+          </Link>
           <Link to="/finale" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/finale' ? 'text-korpo-orange' : ''}`}>
             La finale
           </Link>
@@ -107,7 +107,6 @@ export const Navbar = () => {
             <Link to="/finale" className={`text-white font-medium hover:text-korpo-orange transition-colors ${location.pathname === '/contact' ? 'text-korpo-orange' : ''}`}>
               La finale
             </Link>
-            
             <Link to="/inscription">
             <Button className="bg-korpo-orange hover:bg-amber-600 text-white font-semibold">
               INSCRIVEZ-VOUS
