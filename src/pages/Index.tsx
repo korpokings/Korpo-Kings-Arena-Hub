@@ -11,6 +11,7 @@ import LastNewsSection from '@/components/LastNewsSection';
 import FinalsSection from '@/components/FinalsSection';
 import SocialSection from '@/components/SocialSection';
 import RegisterBg from '@/assets/images/4.png'
+import SponsorsSection from '@/components/SponsorsSection';
 
 const Index = () => {
 
@@ -28,6 +29,9 @@ const Index = () => {
       {/* Why Participate Section */}
       <WhyParticipateSection />
 
+      {/* Sponsors Section*/}
+      <SponsorsSection/>
+
       {/* Rules Section */}
       <RulesSection />
 
@@ -35,7 +39,7 @@ const Index = () => {
       <TournamentFormatSection />
 
       {/* News Section */}
-      
+      <LastNewsSection />
 
       {/* Finals Section */}
       <FinalsSection />
