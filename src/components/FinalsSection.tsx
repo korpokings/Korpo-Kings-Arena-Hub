@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight} from 'lucide-react';
+import Cups from "@/assets/images/cups.webp"
 export default function FinalsSection(){
    
     return(
@@ -26,8 +27,8 @@ export default function FinalsSection(){
           <div className="max-w-4xl mx-auto mb-10 flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80" 
-                alt="Célébration" 
+                src={Cups} 
+            alt="Cups"
                 className="rounded-lg w-full h-auto shadow-lg"
               />
             </div>

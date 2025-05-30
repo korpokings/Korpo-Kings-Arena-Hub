@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Briefcase ,Gamepad ,Star} from "lucide-react";
+import { Briefcase ,Gamepad ,Star, EyeIcon} from "lucide-react";
 import conceptBG from "@/assets/images/8.png";
 import { useEffect } from "react";
 
@@ -49,7 +49,7 @@ const Concept = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">LES AVANTAGES DE LA PARTICIPATION</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-korpo-black/80 backdrop-blur-sm border border-korpo-orange/20 rounded-lg p-6 text-center transition-all duration-300 hover:border-korpo-orange">
               <div className="w-16 h-16 rounded-full bg-korpo-orange/20 flex items-center justify-center mx-auto mb-4">
                 <Gamepad className="text-korpo-orange h-8 w-8" />
@@ -58,7 +58,14 @@ const Concept = () => {
               <p className="text-gray-300">Un terrain habillé, des casters, lumières LED et effets sonores créent une ambiance pro, immersive et spectaculaire à chaque match.
 </p>
             </div>
-
+<div className="bg-korpo-black/80 backdrop-blur-sm border border-korpo-orange/20 rounded-lg p-6 text-center transition-all duration-300 hover:border-korpo-orange">
+              <div className="w-16 h-16 rounded-full bg-korpo-orange/20 flex items-center justify-center mx-auto mb-4">
+                <EyeIcon className="text-korpo-orange h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Visibilité Accrue</h3>
+              <p className="text-gray-300">Bannières, panneaux, activations de marque, contenus personnalisés et logos sur nos supports de communication. Grâce au format innovant et au relais d’influenceurs et médias partenaires, votre visibilité est maximisée en interne comme en externe.
+</p>
+            </div>
             <div className="bg-korpo-black/80 backdrop-blur-sm border border-korpo-orange/20 rounded-lg p-6 text-center transition-all duration-300 hover:border-korpo-orange">
               <div className="w-16 h-16 rounded-full bg-korpo-orange/20 flex items-center justify-center mx-auto mb-4">
                 <Briefcase className="text-korpo-orange h-8 w-8" />

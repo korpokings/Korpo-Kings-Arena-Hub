@@ -30,7 +30,7 @@ const Index = () => {
       <WhyParticipateSection />
 
       {/* Sponsors Section*/}
-      <SponsorsSection/>
+      {/* <SponsorsSection/> */}
 
       {/* Rules Section */}
       <RulesSection />

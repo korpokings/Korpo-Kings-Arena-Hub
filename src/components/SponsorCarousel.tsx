@@ -1,6 +1,9 @@
 
 import { useState, useEffect, useRef } from 'react';
 import heroBg from '@/assets/images/heroBg.avif';
+import MDNT from '@/assets/images/LOGO MDNT STUDIO.svg';
+import DISLOG from '@/assets/images/disloog.png';
+import { EyeIcon, Gamepad } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 
 interface Sponsor {
@@ -11,8 +14,8 @@ interface Sponsor {
 
 const SponsorCarousel = () => {
   const sponsors: Sponsor[] = [
-    { id: 1, name: 'Sponsor 1', logo: heroBg },
-    { id: 2, name: 'Sponsor 2', logo: heroBg },
+    { id: 1, name: 'Sponsor 1', logo: MDNT },
+    { id: 2, name: 'Sponsor 2', logo: DISLOG },
     { id: 3, name: 'Sponsor 3', logo: heroBg },  
     { id: 4, name: 'Sponsor 4', logo: heroBg },
     { id: 5, name: 'Sponsor 5', logo: heroBg },
@@ -80,7 +83,7 @@ const SponsorCarousel = () => {
             <img
               src={sponsor.logo}
               alt={sponsor.name}
-              className="h-20 sm:h-24 md:h-28 w-36 sm:w-44 md:w-52 object-cover rounded-lg opacity-80 hover:opacity-100 transition-opacity"
+              className="w-36 h-20 object-contain opacity-90 hover:opacity-100 transition-opacity"
             />
           </div>
         ))}
