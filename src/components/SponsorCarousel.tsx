@@ -1,9 +1,13 @@
-
 import { useState, useEffect, useRef } from 'react';
-import heroBg from '@/assets/images/heroBg.avif';
 import MDNT from '@/assets/images/LOGO MDNT STUDIO.svg';
 import DISLOG from '@/assets/images/disloog.png';
-import { EyeIcon, Gamepad } from 'lucide-react';
+import KORAA from '@/assets/images/KORAA.png';
+import LE7TV from '@/assets/images/LE7TV.png';
+import MARS from '@/assets/images/MARS.png';
+import NRJ from '@/assets/images/NRJ.png';
+import TELQUEL from '@/assets/images/TELQUELL.png';
+import HORIZON from '@/assets/images/HORIZON.png';
+import A532 from '@/assets/images/5322.png';
 import { useInView } from 'react-intersection-observer';
 
 interface Sponsor {
@@ -16,17 +20,20 @@ const SponsorCarousel = () => {
   const sponsors: Sponsor[] = [
     { id: 1, name: 'Sponsor 1', logo: MDNT },
     { id: 2, name: 'Sponsor 2', logo: DISLOG },
-    { id: 3, name: 'Sponsor 3', logo: heroBg },  
-    { id: 4, name: 'Sponsor 4', logo: heroBg },
-    { id: 5, name: 'Sponsor 5', logo: heroBg },
-    { id: 6, name: 'Sponsor 6', logo: heroBg },
+    { id: 3, name: 'Sponsor 3', logo: NRJ },  
+    { id: 4, name: 'Sponsor 4', logo: A532 },
+    { id: 5, name: 'Sponsor 5', logo: MARS },
+    { id: 6, name: 'Sponsor 6', logo: TELQUEL },
+    { id: 7, name: 'Sponsor 7', logo: LE7TV },
+    { id: 8, name: 'Sponsor 8', logo: KORAA },
+    { id: 9, name: 'Sponsor 9', logo: HORIZON },
   ];
 
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
-  
+
   const containerRef = useRef<HTMLDivElement>(null);
   const [isScrolling, setIsScrolling] = useState(false);
 
@@ -63,27 +70,26 @@ const SponsorCarousel = () => {
 
   return (
     <div className="w-full overflow-hidden" ref={ref}>
-      <div 
+      <div
         ref={containerRef}
         className="flex py-6 overflow-x-auto scrollbar-none"
-        style={{ 
+        style={{
           scrollBehavior: 'smooth',
-          msOverflowStyle: 'none', // IE and Edge
-          scrollbarWidth: 'none',  // Firefox
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {/* Double the sponsors array to create a loop effect */}
         {[...sponsors, ...sponsors].map((sponsor, index) => (
           <div
             key={`${sponsor.id}-${index}`}
-            className="flex-shrink-0 mx-4 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg w-40 sm:w-48 md:w-56 lg:w-64 h-24 sm:h-28 md:h-32 transform transition-all duration-500 hover:scale-105 hover:bg-white/20"
+            className="flex-shrink-0 mx-4 flex items-center justify-center w-[120px] h-[80px] transition-transform duration-500 hover:scale-105"
           >
             <img
               src={sponsor.logo}
               alt={sponsor.name}
-              className="w-36 h-20 object-contain opacity-90 hover:opacity-100 transition-opacity"
+              className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity"
             />
           </div>
         ))}
