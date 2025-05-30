@@ -10,6 +10,7 @@ import {
   FaTwitch,
   FaLinkedinIn,
 } from "react-icons/fa6";
+import Logo from "@/assets/images/logo-final-kkc2.png"
 
 const Footer = () => {
   const NewsletterSubmit = (e) => {
@@ -23,8 +24,13 @@ const Footer = () => {
           {/* Logo and About */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="w-10 h-10 mr-3 shield-clip bg-gradient-to-br from-korpo-orange to-amber-600 flex items-center justify-center">
-                <span className="text-white font-extrabold text-sm">KK</span>
+              <div className="w-10 h-10 mr-3 flex items-center justify-center">
+                <Link to="/" className="flex items-center">
+          <img
+            src={Logo} 
+            alt="Logo"
+            className="h-11 w-11 mr-2"></img>
+        </Link>
               </div>
               <h3 className="text-xl font-bold">KORPO KINGS</h3>
             </div>
