@@ -29,9 +29,6 @@ const Index = () => {
       {/* Why Participate Section */}
       <WhyParticipateSection />
 
-      {/* Sponsors Section*/}
-      { <SponsorsSection/> }
-
       {/* Rules Section */}
       <RulesSection />
 
